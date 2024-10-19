@@ -63,12 +63,12 @@ export default function Header() {
                         <div className="header_area">
                             <div className="hrader_items">
                                 <div className="main_logo">
-                                   <Link to="./sdfds"> <img src={mainlogo} alt="" /></Link>
+                                   <Link to="./"> <img src={mainlogo} alt="" /></Link>
                                 </div>
                             </div>
                             <div className="hrader_items">
                                 <div className="sub_logo">
-                                    <Link to="/fgfd">
+                                    <Link to="/">
                                         <img src="https://teslapowerusa.com/assets/images/tesla-logo-1.png" alt="" />
                                     </Link>
                                 </div>
@@ -88,11 +88,11 @@ export default function Header() {
                         </div>
                         <div className="header_option">
                             <ul>
-                                <li><Link to="./main_page.html">HOME</Link></li>
-                                <li><Link to="./power_product.html">POWER PRODUCTS</Link></li>
-                                <li><Link to="./energy_product.html">ENERGY PRODUCTS</Link></li>
-                                <li><Link to="./our_service.html">OUR SERVICES</Link></li>
-                                <li><Link to="./contactus.html">CONTACT US</Link></li>
+                                <li><Link to="./">HOME</Link></li>
+                                <li><Link to="./power">POWER PRODUCTS</Link></li>
+                                <li><Link to="./energy">ENERGY PRODUCTS</Link></li>
+                                <li><Link to="./service">OUR SERVICES</Link></li>
+                                <li><Link to="./contactus">CONTACT US</Link></li>
                             </ul>
                         </div>
                     </div>

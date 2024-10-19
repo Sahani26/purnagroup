@@ -89,13 +89,16 @@ z-index: 111;
         .product_application p{
             padding: 0 10px;
         }
-        main {
+        /* main {
             padding-top: 10px !important;
-        }
+        } */
         .product_items{
             grid-template-columns: 1fr;
         }
         .power_product_area{
             padding: 0 10px;
+        }
+        .pdproduct {
+            padding-top: 5px !important;
         }
     }
