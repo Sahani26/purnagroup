@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect  } from 'react';
 import "../style/header.css";
 import mainlogo from "../assets/mainlogo.png";
 import menu from "../assets/menu.png";
@@ -19,16 +19,16 @@ import { Link } from 'react-router-dom';
 
 
 export default function Header() {
-    // const [isMenuOpen, setIsMenuOpen] = useState(false); // Changed to false to indicate the menu is closed by default
+ 
+    // const [isMenuOpen, setIsMenuOpen] = useState(false); // Menu is closed by default
 
     // const toggleMenu = () => {
-    //     setIsMenuOpen(!isMenuOpen);
+    //     setIsMenuOpen(prevState => !prevState); // Toggle the menu state
     // };
-
 
     // const hideMenuOnClick = () => {
     //     if (isMenuOpen) {
-    //         toggleMenu(); // Hide the menu
+    //         toggleMenu(); // Close the menu if it is open
     //     }
     // };
     const [isMenuOpen, setIsMenuOpen] = useState(false); // Menu is closed by default
@@ -39,9 +39,29 @@ export default function Header() {
 
     const hideMenuOnClick = () => {
         if (isMenuOpen) {
-            toggleMenu(); // Close the menu if it is open
+            setIsMenuOpen(false); // Close the menu if it is open
         }
     };
+
+    // Detect clicks outside the menu to close it
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            // Check if the menu is open and if the clicked target is outside the menu
+            if (isMenuOpen && !event.target.closest('.mobile_mennnu') && !event.target.closest('.menuline')) {
+                setIsMenuOpen(false); // Close the menu
+            }
+        };
+
+        // Add event listener when the menu is open
+        if (isMenuOpen) {
+            document.addEventListener('click', handleClickOutside);
+        }
+
+        // Clean up event listener when the component unmounts or menu closes
+        return () => {
+            document.removeEventListener('click', handleClickOutside);
+        };
+    }, [isMenuOpen]);
     return (
         <>
             <header>
