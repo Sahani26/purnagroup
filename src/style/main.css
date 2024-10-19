@@ -89,6 +89,9 @@ margin: 0 20px !important;
     color: white;
     text-decoration: none;
 }
+button.slick-arrow.slick-next {
+    display: none !important;
+}
 @media (max-width:676px) {
     .wel_pict{
         height: 250px;

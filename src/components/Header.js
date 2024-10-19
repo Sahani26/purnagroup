@@ -105,7 +105,7 @@ export default function Header() {
                             </div>
                             <div className="hrader_items">
                                 <div className="sub_logo">
-                                    <Link to="/">
+                                    <Link to="./">
                                         <img src="https://teslapowerusa.com/assets/images/tesla-logo-1.png" alt="" />
                                     </Link>
                                 </div>
