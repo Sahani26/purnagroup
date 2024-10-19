@@ -1,0 +1,116 @@
+.wel_pict{
+    background-image: url("https://static.wixstatic.com/media/4cb2411121d14cab94fb4cfb11f4f056.jpg/v1/fill/w_1733,h_736,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/4cb2411121d14cab94fb4cfb11f4f056.jpg");
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 12;
+  height: 620px;
+
+}
+.main_component{
+    padding-top: 100px !important;
+ }
+.wel_pict:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #8f8175;
+    opacity: .3;
+}
+.slick-slide{
+margin: 0 20px !important;
+/* border: 1px solid !important; */
+}
+.welcome_cotain{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 200px;
+    /* width: 100%;
+    height: 100%; */
+}
+.aboutus,.our_clint_area{
+    width: 1200px;
+    margin: 50px auto;
+}
+.head_plane{
+    background-color: #919191;
+    color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+.header_option li:hover {
+    cursor: pointer;
+    color: #f28b26;
+}
+.about_head{
+    text-align: center;
+    padding: 10px 0;
+
+}
+.aboutus p{
+    font-size: 16px;
+}
+.aboutus p {
+    font-size: 15px;
+    line-height: 25px;
+    padding: 5px 0;
+}
+
+.clint_area h1{
+    text-align: center;
+}
+.sliderr{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.slide img{
+    width: auto;
+    height: auto;
+}
+.welcome_cotain h1{
+    color: #2e3091;
+    text-align: start;
+}
+.welcome_cotain span{
+    display: block;
+    color: #f28b26;
+    padding-bottom: 20px;
+}
+.welcome_cotain a {
+    background-color: #f28b26;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 17px 0;
+    color: white;
+    text-decoration: none;
+}
+@media (max-width:676px) {
+    .wel_pict{
+        height: 250px;
+    }
+    .welcome_cotain{
+        top: 0;
+        width: 100%;
+    }
+    .welcome_cotain h1 {
+        padding: 30px 10px;
+        font-size: 15px;
+    }
+    .welcome_cotain a{
+        margin: 0 10px;
+    }
+    .aboutus, .our_clint_area{
+        width: 100%;
+    }
+    .aboutus p {
+        font-size: 15px;
+        line-height: 25px;
+        padding: 0px 11px;
+        text-align: justify;
+    }
+}
