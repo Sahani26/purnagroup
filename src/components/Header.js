@@ -19,12 +19,29 @@ import { Link } from 'react-router-dom';
 
 
 export default function Header() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false); // Changed to false to indicate the menu is closed by default
+    // const [isMenuOpen, setIsMenuOpen] = useState(false); // Changed to false to indicate the menu is closed by default
+
+    // const toggleMenu = () => {
+    //     setIsMenuOpen(!isMenuOpen);
+    // };
+
+
+    // const hideMenuOnClick = () => {
+    //     if (isMenuOpen) {
+    //         toggleMenu(); // Hide the menu
+    //     }
+    // };
+    const [isMenuOpen, setIsMenuOpen] = useState(false); // Menu is closed by default
 
     const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
+        setIsMenuOpen(prevState => !prevState); // Toggle the menu state
     };
 
+    const hideMenuOnClick = () => {
+        if (isMenuOpen) {
+            toggleMenu(); // Close the menu if it is open
+        }
+    };
     return (
         <>
             <header>
@@ -88,11 +105,11 @@ export default function Header() {
                         </div>
                         <div className="header_option">
                             <ul>
-                                <li><Link to="./">HOME</Link></li>
-                                <li><Link to="./power">POWER PRODUCTS</Link></li>
-                                <li><Link to="./energy">ENERGY PRODUCTS</Link></li>
-                                <li><Link to="./service">OUR SERVICES</Link></li>
-                                <li><Link to="./contactus">CONTACT US</Link></li>
+                                <li className="respo_bt" onClick={hideMenuOnClick}><Link to="./">HOME</Link></li>
+                                <li className="respo_bt" onClick={hideMenuOnClick}><Link to="./power">POWER PRODUCTS</Link></li>
+                                <li className="respo_bt" onClick={hideMenuOnClick}><Link to="./energy">ENERGY PRODUCTS</Link></li>
+                                <li className="respo_bt" onClick={hideMenuOnClick}><Link to="./service">OUR SERVICES</Link></li>
+                                <li className="respo_bt" onClick={hideMenuOnClick}><Link to="./contactus">CONTACT US</Link></li>
                             </ul>
                         </div>
                     </div>
